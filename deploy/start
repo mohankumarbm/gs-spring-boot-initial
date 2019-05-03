@@ -1,0 +1,3 @@
+#!/bin/sh
+
+java -jar /home/ubuntu/gs-spring-boot-0.1.0.jar 2> error.log > output.log &
