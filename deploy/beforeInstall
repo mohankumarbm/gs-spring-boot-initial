@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for pid in `pgrep -f /home/ubuntu/gs-spring-boot-0.1.0.jar`
+    do
+    	echo $pid
+    done
