@@ -4,6 +4,10 @@ files:
   - source: /
     destination: /var/www/html/
 hooks:
+  BeforeInstall:
+    - location: deploy/beforeInstall
+      timeout: 300
+      runas: root
   ApplicationStart:
     - location: deploy/start
       timeout: 300
