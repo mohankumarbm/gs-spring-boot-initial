@@ -1,14 +1,14 @@
 version: 0.0
-os: linux
+os: ubuntu
 files:
-  - source: /index.html
+  - source: /
     destination: /var/www/html/
 hooks:
-  BeforeInstall:
-    - location: deploy/before_install
+  ApplicationStart:
+    - location: deploy/start
       timeout: 300
       runas: root
-  AfterInstall:
-    - location: deploy/restart_server
+  ApplicationStop:
+    - location: deploy/stop
       timeout: 300
       runas: root
